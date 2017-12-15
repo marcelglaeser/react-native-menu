@@ -1,9 +1,11 @@
+const createReactClass = require('create-react-class');
+
 module.exports = (React, ReactNative) => {
   const { Animated, Platform } = ReactNative;
   const TimerMixin = require('react-timer-mixin');
 
   // A component that scales in when mounted.
-  const AnimatedOptionsContainer = React.createClass({
+  const AnimatedOptionsContainer = createReactClass({
     mixins: [TimerMixin],
     getInitialState() {
       return { scaleAnim: new Animated.Value(Platform.OS === "android" ? 0.01 : 0.001) };

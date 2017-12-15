@@ -1,4 +1,7 @@
+import PropTypes from 'prop-types';
+
 const TimerMixin = require('react-timer-mixin');
+const createReactClass = require('create-react-class');
 
 let nextID = 1;
 

@@ -1,18 +1,21 @@
+import PropTypes from 'prop-types';
+var createReactClass = require('create-react-class');
+
 module.exports = (React, ReactNative, { model }) => {
   const { TouchableWithoutFeedback, View } = ReactNative;
 
-  const MenuTrigger = React.createClass({
+  const MenuTrigger = createReactClass({
     displayName: 'MenuTrigger',
     propTypes: {
-      disabled: React.PropTypes.bool,
-      renderTouchable: React.PropTypes.func
+      disabled: PropTypes.bool,
+      renderTouchable: PropTypes.func
     },
     getDefaultProps() {
       return {disabled: false}
     },
     contextTypes: {
       menuController: model.IMenuController,
-      getClosestMenuName: React.PropTypes.func.isRequired
+      getClosestMenuName: PropTypes.func.isRequired
     },
     onPress() {
       if (!this.props.disabled) {

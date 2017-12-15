@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
+
 module.exports = (React) => {
-  const { shape, func } = React.PropTypes;
+  const { shape, func } = PropTypes;
 
   const IMenuController = shape({
     open: func.isRequired,

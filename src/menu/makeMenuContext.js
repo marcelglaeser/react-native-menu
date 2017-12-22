@@ -51,10 +51,10 @@ module.exports = (React, ReactNative, { constants, model, styles }) => {
    * top-level methods. It also allows the <MenuOptions/> element to be placed
    * properly.
    */
-  const MenuContext = React.createClass({
+  const MenuContext = createReactClass({
     displayName: 'MenuContext',
     propTypes: {
-      detectBackHandler: React.PropTypes.bool,
+      detectBackHandler: PropTypes.bool,
     },
     getDefaultProps() {
       return {

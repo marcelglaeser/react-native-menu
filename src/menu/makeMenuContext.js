@@ -127,7 +127,7 @@ module.exports = (React, ReactNative, { constants, model, styles }) => {
       };
       return { menuController };
     },
-    componentWillMount() {
+    componentDidMount() {
       this._menus = {};
       this._options = {};
       // Only do this once on initial layout.
